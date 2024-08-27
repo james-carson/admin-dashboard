@@ -10,81 +10,102 @@
 
 <body>
     <div id="background">
-        <div id="container">
-            <div id="sidebar">
+        <div id="container" class="grid">
+            <div id="sidebar" class="grid">
                 <div id="sidebar_top" class="sidebar"><h1>Dashboard</h1></div>
-                <div id="sidebar_bottom" class="sidebar">
+                <div id="sidebar_bottom" class="sidebar grid">
                     <div class="icon">H</div>
-                    <div class="side_link">Home</div>
+                    <div class="side_link"><a href="home.html">Home</a></div>
 
                     <div class="icon">P</div>
-                    <div class="side_link">Profile</div>
+                    <div class="side_link"><a href="profile.html">Profile</a></div>
 
                     <div class="icon">M</div>
-                    <div class="side_link">Messages</div>
+                    <div class="side_link"><a href="profile.html">Messages</a></div>
 
                     <div class="icon">H</div>
-                    <div class="side_link">History</div>
+                    <div class="side_link"><a href="history.html">History</a></div>
 
                     <div class="icon">T</div>
-                    <div class="side_link">Tasks</div>
+                    <div class="side_link"><a href="tasks.html">Tasks</a></div>
 
                     <div class="icon">C</div>
-                    <div class="side_link">Communities</div>
+                    <div class="side_link"><a href="communites.html">Communities</a></div>
 
-                    <div class="icon">B</div>
-                    <div class="side_link">Blank</div>
-
-                    <div class="icon">S</div>
-                    <div class="side_link">Settings</div>
+                    <div class="icon"></div>
+                    <div class="side_link"></div>
 
                     <div class="icon">S</div>
-                    <div class="side_link">Support</div>
+                    <div class="side_link"><a href="settings.html">Settings</a></div>
+
+                    <div class="icon">S</div>
+                    <div class="side_link"><a href="support.html">Support</a></div>
 
                     <div class="icon">P</div>
-                    <div class="side_link">Privacy</div>
+                    <div class="side_link"><a href="privacy.html">Privacy</a></div>
                 </div>
             </div>
-            <div id="header">
-                <div id="header_top" class="header">Header Top</div>
-                <div id="header_bottom" class="header">Header Bottom</div>
+            <div id="header" class="grid">
+                <div id="header_top" class="header grid">
+                    <div id="search">
+                        S
+                        <input type="search">
+                    </div>
+                    <div id="user" class="grid">
+                        <div id="bell_icon" class="user">Bell</div>
+                        <div id="user_image_small" class="user">User</div>
+                        <div id="username" class="user">Username</div>
+                    </div>
+                </div>
+                <div id="header_bottom" class="header grid">
+                    <div id="greeting" class="grid">
+                        <div id="user_image_large"></div>
+                        <div id="greeting_top">Hello there,</div>
+                        <div id="greeting_bottom">James Carson (@james-carson)</div>
+                    </div>
+                    <div id="buttons" class="grid">
+                        <div>Button 1</div>
+                        <div>Button 2</div>
+                        <div>Button 3</div>
+                    </div>
+                </div>
             </div>
-            <div id="content">
-                <div id="projects">
-                    <div id="card_title">
+            <div id="content" class="grid pad_bottom">
+                <div id="projects" class="grid">
+                    <div id="card_title" class="pad">
                         <h2>Projects</h2>
                     </div>
-                    <div id="card_container">
-                        <div id="card1" class="card">
+                    <div id="card_container" class="grid">
+                        <div id="card1" class="card grid">
                             <div class="title">Card 1</div>
                             <div class="card_content">Banjo grailed messenger bag next level ugh skateboard, woke
                                 distillery portland pork belly four dollar toast chambray activated charcoal jawn.</div>
                             <div class="links"></div>
                         </div>
-                        <div id="card2" class="card">
+                        <div id="card2" class="card grid">
                             <div class="title">Card 2</div>
                             <div class="card_content">Schlitz PBR&B mustache, praxis flexitarian mukbang art party
                                 bitters ramps trust fund poke asymmetrical.</div>
                             <div class="links"></div>
                         </div>
-                        <div id="card3" class="card">
+                        <div id="card3" class="card grid">
                             <div class="title">Card 3</div>
                             <div class="card_content">Ennui locavore art party wolf solarpunk.</div>
                             <div class="links"></div>
                         </div>
-                        <div id="card4" class="card">
+                        <div id="card4" class="card grid">
                             <div class="title">Card 4</div>
                             <div class="card_content">Affogato retro gatekeep, DSA offal selvage poke cloud bread
                                 asymmetrical banh mi viral unicorn hell of raw denim listicle.</div>
                             <div class="links"></div>
                         </div>
-                        <div id="card5" class="card">
+                        <div id="card5" class="card grid">
                             <div class="title">Card 5</div>
                             <div class="card_content">Celiac PBR&B ascot kale chips schlitz literally butcher banjo.
                             </div>
                             <div class="links"></div>
                         </div>
-                        <div id="card6" class="card">
+                        <div id="card6" class="card grid">
                             <div class="title">Card 6</div>
                             <div class="card_content">Mukbang blackbird spyplane pour-over gentrify shabby chic
                                 biodiesel franzen sartorial waistcoat ennui shaman copper mug.</div>
@@ -92,14 +113,23 @@
                         </div>
                     </div>
                 </div>
-                <div id="announcements_trending">
-                    <div id="announcements">
-                        <div id="announcements_header"><h2>Announcements</h2></div>
-                        <div id="announcements_card"></div>
+                <div id="announcements_trending" class="grid">
+                    <div id="announcements" class="grid">
+                        <div id="announcements_header" class="pad"><h2>Announcements</h2></div>
+                        <div id="announcements_card" class="grid pad">
+                            <div>Announcement 1</div>
+                            <div>Announcement 2</div>
+                            <div>Announcement 3</div>
+                        </div>
                     </div>
-                    <div id="trending">
-                        <div id="trending_header"><h2>Trending</h2></div>
-                        <div id="trending_card"></div>
+                    <div id="trending" class="grid">
+                        <div id="trending_header" class="pad"><h2>Trending</h2></div>
+                        <div id="trending_card" class="grid pad">
+                            <div>Trending 1</div>
+                            <div>Trending 2</div>
+                            <div>Trending 3</div>
+                            <div>Trending 4</div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -33,6 +33,18 @@
     outline: 1px red solid;
   }
 
+  .grid {
+    display: grid;
+  }
+
+  .pad_bottom {
+    padding-bottom: 2.5%;
+  }
+
+  .pad {
+    padding: 5px;
+  }
+
   #background {
     height: 100vh;
     width: 100vw;
@@ -46,66 +58,96 @@
     height: 100%;
     width: 80%;
     background-color: white;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
   }
 
   #sidebar{
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-    display: grid;
     grid-template-rows: 1fr 9fr;
   }
 
   #sidebar_bottom {
-    display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: repeat(10, 50px);
+    grid-template-rows: repeat(10, 15%);
     align-self: start;
     gap: 5px;
     padding: 0 5px 0 5px;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   #header {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    display: grid;
     grid-template-rows: 1fr 2fr;
+  }
+
+  #header_top, #header_bottom {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  #user {
+    grid-template-columns: 1fr 1fr 3fr;
+  }
+
+  #greeting {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 2fr 3fr;
+  }
+
+  #user_image_large {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+
+  #greeting_top {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  #buttons {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   #content {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    display: grid;
     grid-template-columns: 2fr 1fr;
   }
 
   #projects {
-    display: grid;
-    grid-template-rows: 50px auto;
+    grid-column: 1 / 2;
+    grid-template-rows: 50px 1fr;
   }
 
   #card_container {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
+    padding: 10px;
   }
 
   .card{
     height: 150px;
-    /* TEMPORARY OUTLINE */
-    outline: black 1px solid;
-    display: grid;
     grid-template-rows: 1fr 2fr 1fr;
   }
 
   #announcements_trending {
-    display: grid;
+    grid-column: 2 / 3;
     grid-template-rows: 1fr 1fr;
   }
 
   #announcements, #trending {
-    display: grid;
     grid-template-rows: 50px 1fr;
+  }
+
+  #announcements_card {
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  #trending_card {
+    grid-template-rows: repeat(4, 1fr);
   }
