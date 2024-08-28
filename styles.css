@@ -63,7 +63,7 @@ body {
 
 div {
     /* TEMPORARY FOR OUTLINE */
-    outline: 1px red solid;
+    /* outline: 1px red solid; */
 }
 
 .grid {
@@ -85,6 +85,10 @@ div {
 .centre_both {
     justify-items: center;
     align-items: center;
+}
+
+h2 {
+    font-size: 1.2em;
 }
 
 #background {
@@ -167,7 +171,7 @@ a {
 #header {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 2fr 3fr;
     background-color: white;
 }
 
@@ -187,7 +191,7 @@ a {
 }
 
 input {
-    width: 95%;
+    width: 100%;
     background-color: var(--lightgreen);
     border-radius: 15px;
     border: 0;
@@ -208,12 +212,11 @@ input:focus {
 }
 
 #username {
-    padding-left: 10px;
     justify-self: start;
 }
 
 #user {
-    grid-template-columns: 2fr 2fr 3fr;
+    grid-template-columns: 2fr 1fr 1.5fr;
 }
 
 #greeting {
@@ -221,14 +224,26 @@ input:focus {
     grid-template-rows: 2fr 3fr;
 }
 
+#greeting_top {
+    font-size: 0.75em;
+    align-content: end;
+}
+
 #user_image_large {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    align-self: start;
+    justify-self: end;
+    padding-right: 10px;
 }
 
 #greeting_top {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+}
+
+#greeting_bottom {
+    font-weight: bold;
 }
 
 #buttons {
@@ -261,7 +276,13 @@ button:hover {
 
 #projects {
     grid-column: 1 / 2;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 30px 1fr;
+    padding: 10px 0 0 10px;
+}
+
+#card_title {
+    padding-left: 20px;
+    align-self: end;
 }
 
 #card_container {
@@ -271,11 +292,38 @@ button:hover {
 }
 
 .card {
-    height: 150px;
+    height: 180px;
     grid-template-rows: 1fr 2fr 1fr;
     background-color: white;
     border-left: var(--orange) 5px solid;
-    border-radius: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px var(--lightgreen);
+}
+
+.title {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.card_content {
+    font-size: 0.75em;
+    line-height: 1;
+    color: darkslategray;
+}
+
+#star, #eye, #share {
+    height: 25px;
+    width: 25px;
+    align-self: end;
+    justify-self: end;
+    /* filter: invert(57%) sepia(26%) saturate(374%) hue-rotate(106deg) brightness(95%) contrast(92%); */
+    filter: invert(43%) sepia(54%) saturate(4216%) hue-rotate(9deg) brightness(90%) contrast(94%);
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
 }
 
 #announcements_trending {
@@ -285,17 +333,60 @@ button:hover {
 
 #announcements,
 #trending {
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 30px 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+#announcements_card, #trending_card {
+    box-shadow: 2px 2px var(--lightgreen);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 #announcements_card {
     grid-template-rows: repeat(3, 1fr);
+    padding: 10px;
+    line-height: 1;
+    font-size: 0.8em;
+}
+.ann_content {
+    padding: 5px;
+    align-content: center;
+}
+
+#ann_1, #ann_2 {
+    border-bottom: solid 1px lightgrey;
+}
+
+#announcements_card > div > p {
+    color: darkslategray
+}
+
+#announcements_header, #trending_header {
+    padding-left: 10px;
+    align-self: center;
 }
 
 #trending_card {
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: repeat(4, 1fr);
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+#trending_card > div > p {
+    color: darkslategray;
 }
 
 #announcements_card, #trending_card {
     background-color: white;
+}
+
+.trending_icon {
+    justify-self: end;
+    height: 50px;
+    width: 50px;
 }
