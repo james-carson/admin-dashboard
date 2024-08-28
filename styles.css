@@ -61,10 +61,10 @@ body {
     font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-div {
-    /* TEMPORARY FOR OUTLINE */
-    /* outline: 1px red solid; */
-}
+/* div {
+    TEMPORARY FOR OUTLINE
+    outline: 1px red solid;
+} */
 
 .grid {
     display: grid;
@@ -308,7 +308,7 @@ button:hover {
 
 .card_content {
     font-size: 0.75em;
-    line-height: 1;
+    line-height: 1.2;
     color: darkslategray;
 }
 
@@ -347,7 +347,7 @@ button:hover {
 #announcements_card {
     grid-template-rows: repeat(3, 1fr);
     padding: 10px;
-    line-height: 1;
+    line-height: 1.2;
     font-size: 0.8em;
 }
 .ann_content {
@@ -379,6 +379,11 @@ button:hover {
 
 #trending_card > div > p {
     color: darkslategray;
+}
+
+#trending_card > div > p {
+    color: black;
+    font-weight: 700;
 }
 
 #announcements_card, #trending_card {
